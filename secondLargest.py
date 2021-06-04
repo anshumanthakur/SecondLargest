@@ -8,8 +8,8 @@ def printSecondLargest(arr):
 
     for i in arr:
         current = int(i)
-        if(current > 2147483647):
-            return("please enter smaller value")
+        if(current > 2147483647 or current < -2147483648):
+            return("please enter value in range -2147483648 to 2147483647")
         try:
             if(current>max1):
                 max2=max1
