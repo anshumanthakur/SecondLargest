@@ -1,10 +1,9 @@
 import sys
 
 def printSecondLargest(arr):
-    max1 = sys.maxsize - 1
+    max1 = -sys.maxsize
     max2 = -sys.maxsize
 
-    print(max1)
 
     if(len(arr) < 2):
         return ("-1")
@@ -29,7 +28,7 @@ def printSecondLargest(arr):
     result = "Second largest element is " + str(max2)
     return (result)
 
-arr =  []
+arr =  ["4", "4"]
 result = printSecondLargest(arr)
 print(result)
 
