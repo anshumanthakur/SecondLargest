@@ -1,8 +1,10 @@
 import sys
 
 def printSecondLargest(arr):
-    max1 = -sys.maxsize
+    max1 = sys.maxsize - 1
     max2 = -sys.maxsize
+
+    print(max1)
 
     if(len(arr) < 2):
         return ("-1")
@@ -10,10 +12,10 @@ def printSecondLargest(arr):
         return("array size exceeded")
 
     for i in arr:
-        current = int(i)
-        if(current > 2147483647):
-            return("please enter smaller value")
         try:
+            current = int(i)
+            if(current > 2147483647):
+                return("please enter smaller value")
             if(current>max1):
                 max2=max1
                 max1=current
@@ -27,7 +29,7 @@ def printSecondLargest(arr):
     result = "Second largest element is " + str(max2)
     return (result)
 
-arr =  ["-214748364801","-214748364802"]
+arr =  []
 result = printSecondLargest(arr)
 print(result)
 
